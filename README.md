@@ -5,6 +5,8 @@ I am helping the head of data science for a city school district analyze standar
 
 Additionally, after running our intial district and school level analyses, the school board brought to our attention that our file with student test score data showed evidence of academic dishonesty. Specifically speaking, the affected data was that of the Thomas High School 9th graders. To ensure our distrcit and school analysis was an accurate representation, we decided to rerun the analysis without Thomas High School's 9th grader math and reading scores.
 
+Github does not properly format the tables from jupyter notebooks. Go to the following link for proper formatting: https://nbviewer.jupyter.org/github/asliwinski23/School_District_Analysis/blob/main/PyCitySchools_Challenge.ipynb
+
 ## Resources
   * Data Source: schools_complete.csv, students_complete.csv
   * Software: Python 3.6.1, Jupyter Notebook, 1.0.0, Pandas, 1.1.3
