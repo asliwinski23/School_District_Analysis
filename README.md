@@ -1,20 +1,18 @@
 # School_District_Analysis
 
 ## Project Overview
-I am helping the head of data science for a city school district analyze standardized test data for analysis, reporting, and insights about performance trends and patterns. These insights are used to inform discussions and strategic decisions at the school and district level. In this analysis the variables we focused on were school budgets, size, and type (district vs charter) compared to student's standardized test scores in reading and math to explore if there is any apparent relationship between these variables.
+I am helping the head of data science at a school district analyze high school student's standardized test score data for analysis, reporting, and insights about performance trends and patterns. These insights are used to inform discussions and strategic decisions at the school and district level. In this analysis the variables we focused on were school budgets, size, and type (district vs charter) compared to student's standardized test scores in reading and math in order to explore if there is any apparent relationship between these variables and student performance.
 
-Additionally, after running our intial district and school level analyses, the school board brought to our attention that our file with student test score data showed evidence of academic dishonesty. Specifically speaking, the affected data was that of the Thomas High School 9th graders. To ensure our distrcit and school analysis was an accurate representation, we decided to rerun the analysis without Thomas High School's 9th grader math and reading scores.
+Additionally, after running our intial district and school level analyses, the school board brought to our attention that the file with student test score data showed evidence of academic dishonesty. Specifically speaking, the affected data was that of the Thomas High School 9th graders. To ensure our district and school analyses are accurate, we decided to rerun the analysis without Thomas High School's 9th grade math and reading scores.
 
-Github does not properly format the tables from jupyter notebooks. Go to the following link for proper formatting: https://nbviewer.jupyter.org/github/asliwinski23/School_District_Analysis/blob/main/PyCitySchools_Challenge.ipynb
+Github does not properly format the tables from jupyter notebooks. Go to the following link for proper formatting of our school analyses: https://nbviewer.jupyter.org/github/asliwinski23/School_District_Analysis/blob/main/PyCitySchools_Challenge.ipynb
 
 ## Resources
   * Data Source: schools_complete.csv, students_complete.csv
   * Software: Python 3.6.1, Jupyter Notebook, 1.0.0, Pandas, 1.1.3
 
-## Summary
-Our results did vary from our first pass at the district and school analysis once nullified Thomas High School's 9th grade math and reading scores. Highlighted below are the ways in which our analysis was affected.
-
-## How does replacing the ninth-grade scores affect the following:
+## How does replacing Thomas High School's 9th grade scores affect the analysis?
+Our results did vary from our first pass at the district and school analysis once we nullified Thomas High School's 9th grade math and reading scores, however not in a significant way. Highlighted below are the ways in which our analysis was or was not affected as well as some of the general patterns observed.
 
 ### District Summary
 The district summary was not affectly greatly as 9th graders at Thomas High School only account for 1% of the student's in this study.
@@ -23,7 +21,7 @@ Below is the final district summary:
 ![District_Analysis](https://github.com/asliwinski23/School_District_Analysis/blob/main/Resources/District_Analysis.png)
 
 ### School Summary
-Of course, in the school-level summary, the only difference was Thomas High School's data as theirs was the only data that had invalid points of data. However, there was not a significant difference (<1%) in the percentage of students who passed the reading test, math test, and passed both the reading and math tests.
+Of course, in the school-level summary, the only difference was the row  for Thomas High School, as theirs was the only data that had invalid points of data. However, there was not a significant difference (<1%) in the percentage of students who passed the reading test, math test, and passed both the reading and math tests once 9th grade scores were omitted.
 
 Below is the final school summary:
 ![Per_School_Analysis](https://github.com/asliwinski23/School_District_Analysis/blob/main/Resources/Per_School_Analysis.png)
@@ -38,7 +36,7 @@ Below are the top 5 performing schools by % Overall Passing:
 The math and reading scores were not affected aside from the fact that 9th grade data for Thomas High School reads as 'nan'.
 
 ### Scores by School Spending
-As aforementioned, we analyzed how school budget would affect student performance in math and reading. After calculating each school's budget per student, we were able to categorize schools into four spending bins: <$584, $585-$629, $630-$644, and $645-$675. Thomas High School fell within the $630-$644 budget per student range. Again, there was no significant drop (<1%) change in the data.
+As aforementioned, we analyzed how school budget would affect student performance in math and reading. After calculating each school's budget per student, we were able to categorize schools into four spending bins: <$584, $585-$629, $630-$644, and $645-$675. Thomas High School fell within the $630-$644 budget per student range. Again, there was no significant drop (<1%) change in the data. It is quite unintuitive, but we noticed that the schools with lower budgets per student had higher passing rates. 
 
 Below is the table for Math and Reading Scores by School Budget per Student:
 ![scores_by_spending](https://github.com/asliwinski23/School_District_Analysis/blob/main/Resources/scores_by_spending.png)
@@ -58,6 +56,6 @@ Below is the table for Math and Reading Scores by School Type:
 ## Summary
 There are minimal changes when we omit the Thomas High School 9th grader data because they only account for 1% of the student population we have data for. However, four changes between our first analysis vs second analysis without Thomas High School 9th grader scores are:
 1. The number of total students we have data for dropped by ~1%
-2. The number of students we have data for at Thomas High School dropped by 28%
+2. The number of students we have data for at Thomas High School dropped by ~28%
 3. We no longer have data for Thomas High School 9th graders when trying to compare to other schools
 4. % Overall Passing changed by <1%, but this column changed the most between our analyses
